@@ -26,7 +26,19 @@
 				}
 		}
 
-		class car {
+		abstract class vehicle{
+
+			public function accel(){
+				echo "car is going faster</br>";
+			}
+			public function decel(){
+				echo "car is going slower</br>";
+			}
+
+
+		}
+
+		class car extends vehicle{
 
 				public $make;
 				public $model;
@@ -35,17 +47,9 @@
 				public function __construct(){
 					$this->make = 'ford';
 					$this->year = date("y");
-
 				}
-				public function accel(){
-					echo "car is going faster</br>";
-				}
-				public function decel(){
-					echo "car is going slower</br>";
-
-				}
-
 
 		}
+
 
 ?>
