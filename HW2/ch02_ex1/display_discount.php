@@ -9,7 +9,7 @@
         $FDiscount = filter_input(INPUT_POST, 'discount_percent');
 
         $Discount1 = $FPrice * $FDiscount * .01;
-        $Discount_Price = $FPrice - $Discount;
+        $Discount_Price = $FPrice - $Discount1;
 
         $MPrice = money_format('$%i', $FPrice);
         $MDiscount_Price = money_format('$%i', $Discount_Price);
