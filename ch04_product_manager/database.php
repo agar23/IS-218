@@ -1,17 +1,10 @@
 <?php
-    $hostname = 'sql2.njit.edu';
+    $dsn = 'sql2.njit.edu;dbname=aga23';
     $username = 'aga23';
-    $project  = 'aga23';
     $password = 'RaEYrCvE';
 
     try {
-      print "<h2>";
-      ( $dbh = mysql_connect ( $hostname, $username, $password ) )
-          or die ( "Unable to connect to MySQL database" );
-      print "Connected to MySQL";
-      print "</h2>";
-      mysql_select_db( $project );
-
+        $db = new PDO($dsn, $username, $password);
     } catch (PDOException $e) {
         $error_message = $e->getMessage();
         include('database_error.php');
