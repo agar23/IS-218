@@ -2,7 +2,7 @@
 require_once('database.php');
 
 // Get all categories
-$query = 'SELECT * FROM categories
+$query = 'SELECT * FROM categories_guitar1
                        ORDER BY categoryID';
 $statement = $db->prepare($query);
 $statement->execute();
@@ -28,15 +28,15 @@ $statement->closeCursor();
             <th>Name</th>
             <th>&nbsp;</th>
         </tr>
-        
+
         <!-- add code for the rest of the table here -->
-    
+
     </table>
 
     <h2>Add Category</h2>
-    
+
     <!-- add code for the form here -->
-    
+
     <br>
     <p><a href="index.php">List Products</a></p>
 

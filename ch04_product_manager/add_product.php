@@ -13,8 +13,8 @@ if ($category_id == null || $category_id == false ||
 } else {
     require_once('database.php');
 
-    // Add the product to the database  
-    $query = 'INSERT INTO products
+    // Add the product to the database
+    $query = 'INSERT INTO products_guitar1
                  (categoryID, productCode, productName, listPrice)
               VALUES
                  (:category_id, :code, :name, :price)';
