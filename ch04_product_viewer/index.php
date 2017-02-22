@@ -6,9 +6,9 @@ $category_id = filter_input(INPUT_GET, 'category_id', FILTER_VALIDATE_INT);
 if ($category_id == NULL || $category_id == FALSE) {
     $category_id = 1;
 }
-    
+
 // Get name for selected category
-$queryCategory = 'SELECT * FROM categories
+$queryCategory = 'SELECT * FROM categories_guitar1
                       WHERE categoryID = :category_id';
 $statement1 = $db->prepare($queryCategory);
 $statement1->bindValue(':category_id', $category_id);
@@ -18,7 +18,7 @@ $category_name = $category['categoryName'];
 $statement1->closeCursor();
 
 // Get all categories
-$queryAllCategories = 'SELECT * FROM categories
+$queryAllCategories = 'SELECT * FROM categories_guitar1
                            ORDER BY categoryID';
 $statement2 = $db->prepare($queryAllCategories);
 $statement2->execute();
@@ -26,7 +26,7 @@ $categories = $statement2->fetchAll();
 $statement2->closeCursor();
 
 // Get products for selected category
-$queryProducts = 'SELECT * FROM products
+$queryProducts = 'SELECT * FROM products_guitar1
               WHERE categoryID = :category_id
               ORDER BY productID';
 $statement3 = $db->prepare($queryProducts);
@@ -60,7 +60,7 @@ $statement3->closeCursor();
             </li>
             <?php endforeach; ?>
         </ul>
-        </nav>           
+        </nav>
     </aside>
 
     <section>
@@ -79,10 +79,10 @@ $statement3->closeCursor();
                 <td><?php echo $product['productName']; ?></td>
                 <td class="right"><?php echo $product['listPrice']; ?></td>
             </tr>
-            <?php endforeach; ?>            
+            <?php endforeach; ?>
         </table>
     </section>
-</main>    
+</main>
 <footer></footer>
 </body>
 </html>
