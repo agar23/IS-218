@@ -27,18 +27,24 @@ $statement->closeCursor();
         <tr>
             <th>Name</th>
             <th>&nbsp;</th>
-            <ul>
-                <?php foreach ($categories as $category) : ?>
-                <li>
-                    <a href="?category_id=<?php echo $category['categoryID']; ?>">
-                        <?php echo $category['categoryName']; ?>
-                    </a>
-                </li>
-                <?php endforeach; ?>
-            </ul>
         </tr>
 
-        <!-- add code for the rest of the table here -->
+  <!-- add code for the rest of the table here -->
+
+        <?php foreach ($categories as $category) : ?>
+        <tr>
+          <td>
+            <a href="?category_id=<?php echo $category['categoryID']; ?>">
+                <?php echo $category['categoryName']; ?></a>
+          </td>
+          <td>
+            <form action="delete_category.php" method="post">
+              <input type="hidden" name="category_id" value="<?php echo $category['categoryID']; ?>" >
+              <input type="submit" value="Delete">
+          </form>
+         </td>
+        </tr>
+        <?php endforeach; ?>
 
     </table>
 
