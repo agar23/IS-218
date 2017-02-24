@@ -27,7 +27,7 @@ $statement->closeCursor();
         <tr>
             <th>Name</th>
             <th>&nbsp;</th>
-            <th><ul>
+            <ul>
                 <?php foreach ($categories as $category) : ?>
                 <li>
                     <a href="?category_id=<?php echo $category['categoryID']; ?>">
@@ -35,7 +35,7 @@ $statement->closeCursor();
                     </a>
                 </li>
                 <?php endforeach; ?>
-            </ul></th>
+            </ul>
         </tr>
 
         <!-- add code for the rest of the table here -->
