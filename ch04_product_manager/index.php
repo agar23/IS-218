@@ -43,7 +43,7 @@ $statement3->closeCursor();
 
 <!-- the head section -->
 <head>
-    <title>My Guitar Shop</title>
+    <title>Alfonso's Guitar shop</title>
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 
