@@ -7,12 +7,12 @@ $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 
 // Delete the product from the database
 if ($product_id != false && $category_id != false) {
-    $query = 'DELETE FROM products
+    $query = 'DELETE FROM products_guitar1
               WHERE productID = :product_id';
     $statement = $db->prepare($query);
     $statement->bindValue(':product_id', $product_id);
     $success = $statement->execute();
-    $statement->closeCursor();    
+    $statement->closeCursor();
 }
 
 // Display the Product List page
