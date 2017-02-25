@@ -3,7 +3,6 @@ require_once('database.php');
 
 
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
-echo $category_id;
 
 
 // Delete the product from the database
@@ -16,4 +15,4 @@ if ($category_id != false) {
     $statement->closeCursor();
 }
 
-include('index.php');
+include('category_list.php');
