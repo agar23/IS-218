@@ -26,9 +26,9 @@ $statement->closeCursor();
                 <?php echo $category['categoryName']; ?></a>
           </td>
           <td>
-            <form action="delete_category.php" method="post">
+            <form action="." method="post">
               <input type="hidden" name="category_id" value="<?php echo $category['categoryID']; ?>" >
-              <input type="submit" value="Delete">
+              <input type="submit" name="action" value="Delete">
           </form>
          </td>
         </tr>
@@ -41,7 +41,7 @@ $statement->closeCursor();
       <form action="index.php" method="post"
             id="category_list">
       <input type="text" name="category_name">
-      <input type="submit" name="action" value="add_category"><br>
+      <input type="submit" name="action" value="add"><br>
       </form>
 
     <p><a href="index.php?action=list_products">List Products</a></p>
