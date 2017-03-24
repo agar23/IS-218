@@ -9,7 +9,7 @@
 
 <!-- the body section -->
 <body>
-<header><h1>Alfonso's Shop</h1></header>
+<header><h1>Alfonso's Shop 2</h1></header>
 <main>
     <h1>Menu</h1>
     <ul>
